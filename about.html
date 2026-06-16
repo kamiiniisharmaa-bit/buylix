@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Buylix - About Us | Our Story & Mission</title>
+    <!-- Google Fonts & simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafc;
+            color: #1e2a2a;
+            line-height: 1.5;
+        }
+
+        /* header / navigation */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            border-bottom: 1px solid #eee;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 18px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #0a2540, #2b7a4b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .logo span {
+            font-size: 26px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1f2937;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #2b7a4b;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.1s;
+            color: #2c3e44;
+        }
+
+        .icon-btn:hover {
+            transform: scale(1.05);
+            color: #2b7a4b;
+        }
+
+        /* about hero section */
+        .about-hero {
+            background: linear-gradient(125deg, #eef3ec 0%, #dfe8de 100%);
+            border-radius: 32px;
+            margin: 32px auto 48px auto;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 48px 48px 48px 56px;
+            gap: 32px;
+        }
+
+        .hero-text {
+            flex: 1.2;
+            min-width: 260px;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(120deg, #1f5e3a, #0f3b28);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero-text .tagline {
+            font-size: 20px;
+            font-weight: 500;
+            color: #2c5a48;
+            margin-bottom: 24px;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+            color: #2d3e3a;
+            max-width: 520px;
+            margin-bottom: 28px;
+        }
+
+        .hero-image {
+            flex: 0.9;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            width: 400px;
+            border-radius: 28px;
+            box-shadow: 0 24px 40px -16px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        /* mission banner */
+        .mission-banner {
+            background: #1e2f2a;
+            border-radius: 32px;
+            margin: 40px 0 56px;
+            padding: 56px 48px;
+            text-align: center;
+            color: white;
+        }
+
+        .mission-banner h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        .mission-banner p {
+            font-size: 18px;
+            max-width: 720px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* values grid */
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 20px 0 32px 0;
+            letter-spacing: -0.3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 56px;
+            height: 4px;
+            background: #2b7a4b;
+            border-radius: 4px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin: 40px 0 56px;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 28px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.25s;
+            border: 1px solid #edf2ef;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 40px -18px rgba(0,0,0,0.12);
+            border-color: #cde0d6;
+        }
+
+        .value-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a4435;
+        }
+
+        .value-card p {
+            color: #4a5f58;
+            line-height: 1.5;
+        }
+
+        /* story section */
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            align-items: center;
+            margin: 48px 0 56px;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 40px 44px;
+            border: 1px solid #eef3ea;
+        }
+
+        .story-text {
+            flex: 1.2;
+        }
+
+        .story-text h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #15382c;
+        }
+
+        .story-text p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            color: #2d443c;
+        }
+
+        .story-image {
+            flex: 0.9;
+            text-align: center;
+        }
+
+        .story-image img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 28px;
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* team section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 36px;
+            margin: 40px 0 64px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.2s;
+            border: 1px solid #edf2ef;
+            padding: 28px 16px 24px;
+        }
+
+        .team-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #e2efe6;
+        }
+
+        .team-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .team-card p {
+            color: #2b7a4b;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .team-card small {
+            color: #6f8b80;
+            font-size: 14px;
+        }
+
+        /* CTA banner */
+        .cta-banner {
+            background: linear-gradient(105deg, #eaf4e6, #ddebe2);
+            border-radius: 32px;
+            padding: 52px 40px;
+            text-align: center;
+            margin: 32px 0 48px;
+        }
+
+        .cta-banner h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #15382c;
+        }
+
+        .cta-banner .btn-cta {
+            background: #1e2f2a;
+            color: white;
+            border: none;
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .btn-cta:hover {
+            background: #2b7a4b;
+            transform: scale(1.02);
+        }
+
+        /* footer */
+        .footer {
+            background: #0f1714;
+            color: #cdd9d4;
+            padding: 48px 0 32px;
+            margin-top: 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #b1c7bf;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 13px;
+            border-top: 1px solid #2c3e37;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 780px) {
+            .hero-grid, .story-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 32px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .about-hero h1 {
+                font-size: 38px;
+            }
+            .mission-banner {
+                padding: 36px 24px;
+            }
+            .mission-banner h2 {
+                font-size: 28px;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo-area">
+                <div class="logo">Buylix<span>™</span></div>
+                <span style="font-size: 12px; font-weight: 400; color: #5c6f6a;"> | our story</span>
+            </div>
+            <div class="nav-links">
+               <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+            </div>
+            <div class="header-icons">
+                <button class="icon-btn" aria-label="Search">🔍</button>
+                <button class="icon-btn" aria-label="Wishlist">❤️</button>
+                <button class="icon-btn" aria-label="Cart">🛒<span style="font-size: 12px; margin-left: 4px;">0</span></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <!-- Hero About Section -->
+        <div class="about-hero">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>More than style, it’s a movement.</h1>
+                    <div class="tagline">Buylix — where quality meets conscience.</div>
+                    <p>We're on a mission to redefine modern commerce by blending timeless design, ethical sourcing, and uncompromising quality. Every purchase at Buylix makes a difference.</p>
+                    <button class="btn-cta" id="storyBtn" style="background:#1e2f2a; padding: 12px 28px;">Discover our journey →</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/600x550/d9e6df/2b6e49?text=Buylix+Studio" alt="Buylix brand story" onerror="this.src='https://picsum.photos/id/20/550/500'">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission banner -->
+        <div class="mission-banner">
+            <h2>✨ Our mission: Conscious commerce for everyone</h2>
+            <p>We believe great products shouldn't come at the expense of the planet or people. Buylix partners with ethical manufacturers, uses sustainable packaging, and donates 1% of profits to environmental causes.</p>
+        </div>
+
+        <!-- Core Values -->
+        <div class="section-title">What drives us</div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🌱</div>
+                <h3>Sustainable First</h3>
+                <p>Eco-friendly materials, carbon-neutral shipping, and zero-waste packaging are at the heart of every Buylix product.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h3>Radical Transparency</h3>
+                <p>From sourcing to pricing, we share the journey. No hidden fees, no greenwashing — just honest commerce.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">⚡</div>
+                <h3>Community First</h3>
+                <p>We uplift local artisans and give back through ethical labor practices and fair wages across our supply chain.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🎨</div>
+                <h3>Design for All</h3>
+                <p>Inclusive, timeless design that celebrates diversity, empowers self-expression, and lasts beyond seasons.</p>
+            </div>
+        </div>
+
+        <!-- Story + Heritage -->
+        <div class="story-section">
+            <div class="story-text">
+                <h2>How Buylix began</h2>
+                <p>Founded in 2022 by two friends who grew tired of fast fashion and opaque e-commerce, Buylix started as a tiny pop-up in Brooklyn. What began as a curated collection of 15 handmade bags quickly expanded into a global platform for conscious shoppers who refuse to compromise on style or values.</p>
+                <p>Today, Buylix partners with over 80 ethical brands and independent designers across 12 countries — all while maintaining our original promise: exceptional products, transparent sourcing, and customer delight. Our name "Buylix" represents the fusion of "buy" + "lyx" (luxury redefined for the modern world).</p>
+                <p><strong>⭐ B Corp Pending · 1% for the Planet Member · Carbon Neutral Certified</strong></p>
+            </div>
+            <div class="story-image">
+                <img src="https://placehold.co/500x500/f0f3ef/2b7a4b?text=Handcrafted+Ethos" alt="Buylix craftsmanship" onerror="this.src='https://picsum.photos/id/29/500/500'">
+            </div>
+        </div>
+
+        <!-- Meet the team -->
+        <div class="section-title">The hearts behind Buylix</div>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Founder" onerror="this.src='https://picsum.photos/id/64/140/140'">
+                <h4>Maya Chen</h4>
+                <p>Co-Founder & CEO</p>
+                <small>Design & sustainability visionary</small>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Co-founder" onerror="this.src='https://picsum.photos/id/91/140/140'">
+                <h4>James Okonkwo</h4>
+                <p>Co-Founder & CPO</p>
+                <small>Product & ethical sourcing</small>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Creative" onerror="this.src='https://picsum.photos/id/26/140/140'">
+                <h4>Elena Rossi</h4>
+                <p>Creative Director</p>
+                <small>Curating modern aesthetics</small>
+            </div>
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Operations" onerror="this.src='https://picsum.photos/id/100/140/140'">
+                <h4>David Kim</h4>
+                <p>Head of Operations</p>
+                <small>Logistics & carbon-neutral shipping</small>
+            </div>
+        </div>
+
+        <!-- Impact & numbers section -->
+        <div class="mission-banner" style="background:#eaf0e6; color:#1e2f2a; margin-top: 20px;">
+            <h2 style="color:#1a4435;">Our impact so far</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; margin-top: 32px;">
+                <div><strong style="font-size: 36px;">15k+</strong><br>Trees planted</div>
+                <div><strong style="font-size: 36px;">98%</strong><br>Plastic-free packaging</div>
+                <div><strong style="font-size: 36px;">180+</strong><br>Ethical brand partners</div>
+                <div><strong style="font-size: 36px;">$240k</strong><br>Donated to communities</div>
+            </div>
+        </div>
+
+        <!-- CTA to join community -->
+        <div class="cta-banner">
+            <h3>Be part of something better.</h3>
+            <p style="max-width: 560px; margin: 12px auto;">Join the Buylix community for early access, sustainable style guides, and exclusive drops.</p>
+            <button class="btn-cta" id="joinNewsletter">Subscribe to our newsletter →</button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Buylix</h4>
+                <p>Redefining modern commerce with style, quality, and care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <p><a href="#">Help Center</a></p>
+                <p><a href="#">Returns & Exchanges</a></p>
+                <p><a href="#">Shipping Info</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <p><a href="#" style="font-weight: 500; color:#bdd9cf;">About Buylix</a></p>
+                <p><a href="#">Sustainability</a></p>
+                <p><a href="#">Press</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p><a href="#">Instagram</a> · <a href="#">LinkedIn</a></p>
+                <p><a href="#">hello@buylix.com</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Buylix — Built with purpose. Empowering conscious consumers worldwide.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Interactive: cart simulation, toast notifications, dynamic year, and demo interactions
+    (function() {
+        let cartCount = 0;
+        const cartBtnSpan = document.querySelector('.header-icons .icon-btn:last-child span');
+        
+        function updateCartUI() {
+            if(cartBtnSpan) cartBtnSpan.innerText = cartCount;
+        }
+        
+        function showToastMessage(msg, type = 'info') {
+            const toast = document.createElement('div');
+            toast.innerText = msg;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '24px';
+            toast.style.right = '24px';
+            toast.style.backgroundColor = '#1e2f2a';
+            toast.style.color = '#fff';
+            toast.style.padding = '12px 24px';
+            toast.style.borderRadius = '40px';
+            toast.style.fontWeight = '500';
+            toast.style.zIndex = '1000';
+            toast.style.boxShadow = '0 8px 18px rgba(0,0,0,0.1)';
+            toast.style.fontSize = '14px';
+            document.body.appendChild(toast);
+            setTimeout(() => { toast.remove(); }, 2200);
+        }
+        
+        // Cart click
+        const cartIcon = document.querySelector('.header-icons .icon-btn:last-child');
+        if(cartIcon) {
+            cartIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToastMessage(`🛒 Cart (${cartCount} item${cartCount !== 1 ? 's' : ''}) — start shopping!`);
+            });
+        }
+        
+        // Story button smooth scroll or info
+        const storyBtn = document.getElementById('storyBtn');
+        if(storyBtn) {
+            storyBtn.addEventListener('click', () => {
+                showToastMessage('📖 Discover our full journey: ethical, transparent, and community-driven.');
+                document.querySelector('.story-section')?.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+        
+        // Join newsletter demo
+        const joinBtn = document.getElementById('joinNewsletter');
+        if(joinBtn) {
+            joinBtn.addEventListener('click', () => {
+                showToastMessage('✨ Thanks! You’re now on the list. Welcome to Buylix community.');
+            });
+        }
+        
+        // Header icons
+        const searchBtn = document.querySelector('.header-icons .icon-btn:first-child');
+        if(searchBtn) searchBtn.addEventListener('click', () => showToastMessage('🔍 Search sustainable finds at Buylix.'));
+        
+        const wishlistBtn = document.querySelector('.header-icons .icon-btn:nth-child(2)');
+        if(wishlistBtn) wishlistBtn.addEventListener('click', () => showToastMessage('❤️ Create an account to save items to your wishlist.'));
+        
+        // Demo links (footer / nav)
+        const allDemoLinks = document.querySelectorAll('.nav-links a, .footer-col a');
+        allDemoLinks.forEach(link => {
+            if(link.innerText.includes('About Buylix')) return;
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToastMessage(`📄 ${link.innerText} — Explore more on Buylix soon.`);
+            });
+        });
+        
+        // update copyright year
+        const copyrightDiv = document.querySelector('.copyright');
+        if(copyrightDiv) {
+            const currentYear = new Date().getFullYear();
+            if(currentYear !== 2026) {
+                copyrightDiv.innerText = copyrightDiv.innerText.replace('2026', currentYear);
+            }
+        }
+        
+        updateCartUI();
+        
+        // Team images fallback in case of randomuser failures
+        const teamImgs = document.querySelectorAll('.team-card img');
+        teamImgs.forEach(img => {
+            img.addEventListener('error', function() {
+                if(!this.dataset.fixed) {
+                    this.dataset.fixed = 'true';
+                    this.src = 'https://picsum.photos/id/64/140/140';
+                }
+            });
+        });
+    })();
+</script>
+</body>
+</html>

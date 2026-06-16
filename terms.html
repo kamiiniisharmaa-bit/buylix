@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Buylix - Terms of Service | Legal Agreement</title>
+    <!-- Google Fonts & simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafc;
+            color: #1e2a2a;
+            line-height: 1.5;
+        }
+
+        /* header / navigation (identical to homepage for consistency) */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            border-bottom: 1px solid #eee;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 18px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #0a2540, #2b7a4b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .logo span {
+            font-size: 26px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1f2937;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #2b7a4b;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.1s;
+            color: #2c3e44;
+        }
+
+        .icon-btn:hover {
+            transform: scale(1.05);
+            color: #2b7a4b;
+        }
+
+        /* Terms hero section */
+        .terms-hero {
+            background: linear-gradient(115deg, #eef3ed 0%, #e2eae1 100%);
+            border-radius: 28px;
+            margin: 32px auto 40px auto;
+            padding: 48px 40px;
+            text-align: center;
+        }
+
+        .terms-hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(120deg, #1f5e3a, #0f3b28);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .terms-hero p {
+            font-size: 18px;
+            color: #2c4a3f;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #5a756a;
+            font-weight: 500;
+        }
+
+        /* terms content card */
+        .terms-card {
+            background: white;
+            border-radius: 32px;
+            padding: 48px 52px;
+            margin-bottom: 64px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+            border: 1px solid #edf2ef;
+        }
+
+        .terms-section {
+            margin-bottom: 40px;
+        }
+
+        .terms-section h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a3529;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2efe6;
+            display: inline-block;
+        }
+
+        .terms-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 24px 0 12px 0;
+            color: #2b5a45;
+        }
+
+        .terms-section p {
+            margin-bottom: 16px;
+            color: #2d3e38;
+            font-size: 16px;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 12px 0 20px 28px;
+            color: #2d3e38;
+        }
+
+        .terms-section li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #f4faf6;
+            padding: 20px 24px;
+            border-radius: 20px;
+            border-left: 5px solid #2b7a4b;
+            margin: 24px 0;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1e2f2a;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.2s;
+            margin-top: 20px;
+        }
+
+        .back-home:hover {
+            background: #2b7a4b;
+            transform: translateX(4px);
+        }
+
+        /* footer */
+        .footer {
+            background: #0f1714;
+            color: #cdd9d4;
+            padding: 48px 0 32px;
+            margin-top: 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #b1c7bf;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 13px;
+            border-top: 1px solid #2c3e37;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 780px) {
+            .terms-card {
+                padding: 28px 20px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .terms-hero h1 {
+                font-size: 32px;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo-area">
+                <div class="logo">Buylix<span>™</span></div>
+                <span style="font-size: 12px; font-weight: 400; color: #5c6f6a;"> | terms & policies</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+            </div>
+            <div class="header-icons">
+                <button class="icon-btn" aria-label="Search">🔍</button>
+                <button class="icon-btn" aria-label="Wishlist">❤️</button>
+                <button class="icon-btn" aria-label="Cart">🛒<span style="font-size: 12px; margin-left: 4px;">0</span></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <!-- Terms Hero -->
+        <div class="terms-hero">
+            <h1>Terms of Service</h1>
+            <p>Welcome to Buylix. These terms govern your use of our website, purchases, and services. Please read carefully.</p>
+            <div class="last-updated">📅 Last updated: June 12, 2026</div>
+        </div>
+
+        <!-- Main Terms Content -->
+        <div class="terms-card">
+            <div class="terms-section">
+                <h2>1. Agreement Overview</h2>
+                <p>By accessing or using the Buylix website (the "Site"), mobile application, or any related services (collectively, the "Services"), you agree to comply with and be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services. Buylix ("Company", "we", "us", "our") reserves the right to update or modify these Terms at any time without prior notice. Your continued use of the Services after any changes constitutes acceptance of the new Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Eligibility & Account Registration</h2>
+                <p>You must be at least 18 years old or the age of majority in your jurisdiction to use our Services. By creating an account, you agree to provide accurate, current, and complete information. You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account. Buylix reserves the right to suspend or terminate accounts that violate these Terms or applicable laws.</p>
+                <div class="highlight">
+                    <strong>📌 Account Security Tip:</strong> Buylix will never ask for your password via email or phone. Always protect your account and enable two-factor authentication where available.
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. Product Information & Pricing</h2>
+                <p>We strive to display accurate product descriptions, images, and pricing. However, we do not warrant that product descriptions, colors, or other content is error-free. In the event of a pricing error, Buylix reserves the right to cancel any orders placed for products listed at incorrect prices. All prices are listed in USD and are subject to applicable taxes and shipping fees, which will be shown at checkout. Promotional offers and discounts are subject to specific terms and may be withdrawn at any time.</p>
+                <h3>3.1 Availability</h3>
+                <p>Product availability is subject to change without notice. If an item becomes unavailable after you place an order, we will notify you and issue a full refund or suggest alternative options.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. Orders & Payment</h2>
+                <p>When you place an order, you receive an order confirmation email acknowledging receipt of your order. This does not constitute acceptance of your order. We reserve the right to refuse or cancel any order for reasons including but not limited to: product availability, errors in product/price information, or suspicion of fraudulent activity. Payment must be completed via accepted payment methods (credit/debit cards, digital wallets, etc.). By providing payment details, you represent that you are authorized to use the chosen payment method.</p>
+                <ul>
+                    <li><strong>Order Cancellation:</strong> You may request cancellation within 2 hours of placing the order by contacting support. After this period, orders may already be processed for shipment.</li>
+                    <li><strong>Payment Security:</strong> All transactions are encrypted via SSL. Buylix does not store full payment details on our servers.</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. Shipping, Delivery & Risk of Loss</h2>
+                <p>Shipping times and costs are provided at checkout. Estimated delivery dates are not guaranteed and may vary due to carrier delays. Title and risk of loss for products pass to you upon delivery to the carrier. Buylix is not responsible for lost, stolen, or delayed packages after they have been handed to the shipping carrier. Please ensure your shipping address is correct; additional fees may apply for address corrections.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Returns & Refunds</h2>
+                <p>Our <strong>30-Day Satisfaction Guarantee</strong> allows you to return most unused, undamaged items in original packaging within 30 days of delivery for a refund or exchange. Final sale items, personalized goods, and perishable products are non-returnable. To initiate a return, visit our Returns Center. Refunds are processed to the original payment method within 7–10 business days after we receive the returned item. Original shipping fees are non-refundable unless the return is due to our error.</p>
+                <div class="highlight">
+                    💡 <strong>Easy Returns:</strong> For defective or incorrect items, Buylix covers return shipping costs. Contact our support team within 14 days of delivery.
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Intellectual Property Rights</h2>
+                <p>All content on the Buylix website including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, and software is the property of Buylix or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works of any content without express written permission from Buylix. "Buylix" and the Buylix logo are registered trademarks.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>8. User Conduct & Prohibited Activities</h2>
+                <p>When using our Services, you agree not to:</p>
+                <ul>
+                    <li>Violate any applicable law or regulation.</li>
+                    <li>Use robots, scrapers, or any automated means to access the Site for any purpose without our written permission.</li>
+                    <li>Interfere with the security or performance of our Services.</li>
+                    <li>Post false, misleading, or fraudulent information, including fake reviews.</li>
+                    <li>Attempt to gain unauthorized access to any user accounts or systems.</li>
+                </ul>
+                <p>Violation of these rules may result in immediate termination of your account and legal action where applicable.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>9. Privacy & Data Protection</h2>
+                <p>Your privacy is important to us. Our <a href="#" style="color:#2b7a4b;">Privacy Policy</a> explains how we collect, use, and protect your personal data. By using Buylix, you consent to the data practices described in the Privacy Policy, including the transfer of data to third-party service providers for order processing and analytics. For EU users, we comply with GDPR standards; California residents have rights under CCPA.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>10. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, Buylix and its affiliates, directors, employees, or agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including lost profits or data, arising from your use of or inability to use the Services, even if we have been advised of the possibility of such damages. Our total liability for any claim arising from these Terms or your use of the Services shall not exceed the amount you paid to Buylix in the past six months.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>11. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless Buylix, its officers, employees, and agents from any claim, liability, damages, losses, costs, or expenses (including reasonable legal fees) arising out of your violation of these Terms, your misuse of the Services, or your violation of any third-party rights.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>12. Governing Law & Dispute Resolution</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to conflict of law principles. Any dispute arising out of or relating to these Terms or the Services shall first be attempted to be resolved through informal negotiation. If unresolved, disputes shall be submitted to binding arbitration in Wilmington, Delaware, under the rules of the American Arbitration Association. You agree to waive any right to participate in a class-action lawsuit or class-wide arbitration.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>13. Termination</h2>
+                <p>Buylix may suspend or terminate your account and access to the Services at its sole discretion, without notice, for conduct that violates these Terms or is harmful to other users or the Company. Upon termination, you must cease all use of the Services, and any pending orders may be canceled. Sections regarding intellectual property, indemnification, limitation of liability, and governing law shall survive termination.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>14. Contact Information</h2>
+                <p>If you have any questions about these Terms, please reach out to our legal team:</p>
+                <p>📧 <strong>legal@buylix.com</strong><br>
+                📞 <strong>+1 (800) 764-9529</strong><br>
+                🏢 <strong>Buylix Legal Dept., 410 Park Avenue, Suite 820, New York, NY 10022, USA</strong></p>
+                <div class="highlight">
+                    ⏱️ Our support team is available Monday to Friday, 9 AM – 6 PM EST. We aim to respond to all legal inquiries within 3 business days.
+                </div>
+            </div>
+
+            <!-- Back to homepage button -->
+            <div style="margin-top: 48px; text-align: center;">
+                <a href="#" class="back-home" id="backToHomeBtn">← Back to Buylix Homepage</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Buylix</h4>
+                <p>Redefining modern commerce with style, quality, and care.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <p><a href="#">Help Center</a></p>
+                <p><a href="#">Returns & Exchanges</a></p>
+                <p><a href="#">Shipping Info</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <p><a href="#">About Buylix</a></p>
+                <p><a href="#">Sustainability</a></p>
+                <p><a href="#">Press</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <p><a href="#" style="font-weight: 500; color:#bdd9cf;">Terms of Service</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Cookie Preferences</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Buylix — All rights reserved. These Terms form a binding agreement between you and Buylix.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple interactive features: cart counter simulation, back to home behavior, and dynamic year update.
+    (function() {
+        let cartCount = 0;
+        const cartBtnSpan = document.querySelector('.header-icons .icon-btn:last-child span');
+        
+        function updateCartUI() {
+            if(cartBtnSpan) cartBtnSpan.innerText = cartCount;
+        }
+        
+        function showToastMessage(msg) {
+            const toast = document.createElement('div');
+            toast.innerText = msg;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '24px';
+            toast.style.right = '24px';
+            toast.style.backgroundColor = '#1e2f2a';
+            toast.style.color = '#fff';
+            toast.style.padding = '12px 24px';
+            toast.style.borderRadius = '40px';
+            toast.style.fontWeight = '500';
+            toast.style.zIndex = '1000';
+            toast.style.boxShadow = '0 8px 18px rgba(0,0,0,0.1)';
+            toast.style.fontSize = '14px';
+            document.body.appendChild(toast);
+            setTimeout(() => { toast.remove(); }, 2000);
+        }
+        
+        // add dummy cart buttons for header icons? Not necessary but we can allow header cart click simulation
+        const cartIcon = document.querySelector('.header-icons .icon-btn:last-child');
+        if(cartIcon) {
+            cartIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToastMessage(`Your cart has ${cartCount} item${cartCount !== 1 ? 's' : ''}. Start shopping!`);
+            });
+        }
+        
+        // For any "Add to Cart" button that might appear? Terms page doesn't have products, but we could keep consistent.
+        // Also 'Back to Homepage' button redirect simulation
+        const backBtn = document.getElementById('backToHomeBtn');
+        if(backBtn) {
+            backBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToastMessage('✨ Redirecting to Buylix homepage...');
+                setTimeout(() => {
+                    window.location.href = '#';  // In real scenario, change to index.html or relative path
+                    alert('In live environment, this would navigate to the Buylix homepage.');
+                }, 300);
+            });
+        }
+        
+        // Update footer copyright year automatically
+        const copyrightSpan = document.querySelector('.copyright');
+        if(copyrightSpan) {
+            const year = new Date().getFullYear();
+            if(!copyrightSpan.innerText.includes('2026')) {
+                copyrightSpan.innerText = copyrightSpan.innerText.replace('2026', year);
+            }
+        }
+        
+        // Simulate minor interaction for header icons
+        const searchBtn = document.querySelector('.header-icons .icon-btn:first-child');
+        if(searchBtn) {
+            searchBtn.addEventListener('click', () => showToastMessage('🔎 Search products, collections, and more at Buylix.'));
+        }
+        const wishlistBtn = document.querySelector('.header-icons .icon-btn:nth-child(2)');
+        if(wishlistBtn) {
+            wishlistBtn.addEventListener('click', () => showToastMessage('❤️ Sign in to save items to your wishlist.'));
+        }
+        
+        updateCartUI();
+        
+        // Also make sure any links in footer or nav-links have appropriate demo behavior
+        const allDemoLinks = document.querySelectorAll('.nav-links a, .footer-col a');
+        allDemoLinks.forEach(link => {
+            if(!link.closest('.footer-col')?.querySelector('a[style]')) { // skip internal terms highlight
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showToastMessage(`📄 ${link.innerText} — This page is under construction, but Buylix is coming soon!`);
+                });
+            }
+        });
+        
+        // Special handling for privacy policy link inside terms section
+        const privacyInline = document.querySelector('.terms-section a[href="#"]');
+        if(privacyInline && privacyInline.innerText.includes('Privacy Policy')) {
+            privacyInline.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToastMessage('🔒 Buylix Privacy Policy: We protect your data with transparency. Full version available soon.');
+            });
+        }
+        
+    })();
+</script>
+</body>
+</html>
